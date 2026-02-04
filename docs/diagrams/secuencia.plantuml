@@ -1,0 +1,10 @@
+@startuml
+  !include estilos.plantuml
+  hide footbox
+
+  Actor Usuario
+
+  Usuario -> "http://host/" : carga la página
+  "http://host/" -> "http://host/producto/42" : click() en producto 42
+  "http://host/producto/42" -> "http://host/" : click() volver a lista
+@enduml

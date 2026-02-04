@@ -1,0 +1,14 @@
+@startuml
+' Componentes del sistema
+    actor "Visitante" as visi
+    actor "Editor" as edit
+    rectangle "Blog" as blog {
+        (Ver Posts)
+        (Buscar)
+        (Crear/Editar Post) as editar
+    }
+
+    visi -down-> blog
+    edit -down-> editar
+
+@enduml

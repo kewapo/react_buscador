@@ -1,0 +1,6 @@
+@startuml
+  Entity Users
+  Entity Posts
+
+  Users -o Posts 
+@enduml

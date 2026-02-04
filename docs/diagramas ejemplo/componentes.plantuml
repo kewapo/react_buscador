@@ -1,0 +1,29 @@
+@startuml
+' Contexto. Visión general del sistema
+  <style>
+    rectangle {
+        HorizontalAlignment center
+    }
+    database {
+        HorizontalAlignment center
+    }
+  </style>
+  Actor Usuario
+  Rectangle App
+  Rectangle Plataforma {
+    
+    Rectangle Frontend [Frontend React
+    Nextjs/React]
+
+    Rectangle API [API
+    Node/Express]
+
+    database DB [DB 
+    MongoDB]
+  }
+
+  Usuario --> App : Usa
+
+  App-> Plataforma
+
+@enduml 

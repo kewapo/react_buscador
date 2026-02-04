@@ -1,0 +1,18 @@
+@startuml
+' Contexto. Visión general del sistema
+  <style>
+    rectangle {
+        HorizontalAlignment center
+    }
+    database {
+        HorizontalAlignment center
+    }
+  </style>
+
+Actor Usuario
+
+Usuario -> "LoginPage (React)" : click() Iniciar sesión
+"LoginPage (React)" -> API : login(email, pwd)
+API -> "LoginPage (React)" : success(profile)
+"LoginPage (React)" -> Usuario : redirect/dashboard
+@enduml 

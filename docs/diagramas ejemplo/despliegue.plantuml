@@ -1,0 +1,23 @@
+@startuml
+' Diagrama de despliegue para el sistema de buscador
+skinparam componentStyle uml1
+
+node "Cliente" as clien {
+    component "React App" as react
+}
+
+node "CND/Edge" as edge
+
+node "K8s Cluster" as clust{
+    component "API Pod" as apip
+    component "Worker Pod" as work
+}
+
+database "Mongodb" as mongo
+
+' Enlaces entre nodos
+react --> edge : assets
+edge --> apip : HTTPS
+apip --> mongo : SQL
+
+@enduml

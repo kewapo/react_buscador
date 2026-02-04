@@ -1,0 +1,19 @@
+@startuml
+    hide empty description
+    skinparam linetype ortho
+
+    state "Router" as app {
+        state "/" as slash
+        state Header
+        state Sidebar
+        state Router
+        state Dashboard
+
+        slash -down-> Header
+        slash -down-> Sidebar
+        slash -down-> Router
+        Router --> Dashboard
+        Sidebar --> Dashboard
+    }
+
+@enduml

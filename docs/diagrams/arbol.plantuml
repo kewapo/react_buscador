@@ -1,0 +1,11 @@
+@startsalt
+' Árbol de componentes de la aplicación de búsqueda de productos
+    {
+        {T
+            +App
+            ++ Router
+            +++ ListaProductos
+            +++ DetalleProducto
+        }
+    }
+@endsalt

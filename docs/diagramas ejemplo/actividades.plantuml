@@ -1,0 +1,15 @@
+@startuml
+  ' Actividades del proceso de checkout en el buscador
+  :start;
+  :usuario abre /checkout; 
+  :Hay items?;
+  :Mostrar resumen;
+  :Introducir datos envío;
+  :Validar tarjeta;
+  if (Pago OK) then (si)
+    :Crear orden;
+  else (no)
+    :Mostrar error cargo;
+  endif
+  :Redirigir a catálogo;
+@enduml

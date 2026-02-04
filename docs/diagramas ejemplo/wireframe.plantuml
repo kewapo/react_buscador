@@ -1,0 +1,12 @@
+@startsalt
+' Dibujo de la aplicación
+
+    {
+        Login
+        Email | "              "
+        Password | "              "
+        . | {[Submit]|[Cancel]}
+        [X] Remember Me
+    }
+
+@endsalt

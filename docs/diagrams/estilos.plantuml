@@ -1,0 +1,13 @@
+  ' skinparam handwritten true
+  skinparam linetype ortho
+  skinparam componentStyle rectangle
+  skinparam roundCorner 10
+  skinparam ArrowColor RoyalBlue
+  skinparam packageBorderColor RoyalBlue
+  skinparam ComponentBorderColor RoyalBlue
+  skinparam defaultFontColor RoyalBlue
+  skinparam PackageBackgroundColor LightYellow
+  skinparam actor {
+    ' BackgroundColor RoyalBlue
+    BorderColor RoyalBlue
+  }

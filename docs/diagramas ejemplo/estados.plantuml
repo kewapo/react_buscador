@@ -1,0 +1,20 @@
+@startuml
+' Diagrama de estados para la autenticación de usuarios
+' Si pones alias a los estados los dibujará centrados
+
+    state "Anonimo" as anon
+    state "Autenticando" as auto {
+        state "CargandoPerfil" as carga
+        state "Listo" as listo
+        state "Error" as error
+
+    carga --> listo : success
+    listo --> error : fail
+    }
+
+    ' Enlaces entre estados
+    [*] --> auto : LOGIN_OK
+    auto -left-> anon : LOGOUT
+    anon --> [*]
+
+@enduml

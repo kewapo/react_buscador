@@ -1,0 +1,19 @@
+@startuml
+    hide empty description
+    skinparam linetype ortho
+
+    state "App.js" as app {
+        state App
+        state Header
+        state Sidebar
+        state Router
+        state Dashboard
+
+        App -down-> Header
+        App -down-> Sidebar
+        App -down-> Router
+        Router --> Dashboard
+        Sidebar --> Dashboard
+    }
+
+@enduml

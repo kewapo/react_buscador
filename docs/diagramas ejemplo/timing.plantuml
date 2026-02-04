@@ -1,0 +1,22 @@
+@startuml
+    
+    robust "Usuario" as U
+    concise  "UI" as UI
+    concise "API" as API
+
+    @0
+    U is typing
+
+    @10
+    UI is debouncetart
+
+    @40
+    UI is sendQuery
+
+    @70
+    API is respond
+
+    @80
+    
+
+@enduml

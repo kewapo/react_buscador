@@ -1,0 +1,19 @@
+@startuml
+    !include estilos.plantuml
+
+    package "App React" {
+        [Router] as r
+        package [http://host/] as a {
+        [ListaProductos] as l
+        }
+        package [http://host/producto/:id] as p {
+        [DetalleProducto] as d
+        }
+
+        r -> a
+        r -> p
+        a -[hidden]-> p
+        ' l --> d
+        ' d --> l
+    }
+@enduml
